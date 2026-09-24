@@ -1,0 +1,347 @@
+% PH: Offical LaTeX version from https://arc42.org/download/
+
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={arc42 Template},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{\includegraphics{images/arc42-logo.png} Template}
+\author{}
+\date{July 2025}
+
+\begin{document}
+\maketitle
+
+\section{}
+
+\textbf{About arc42}
+
+arc42, the template for documentation of software and system
+architecture.
+
+Template Version 9.0-EN. (based upon AsciiDoc version), July 2025
+
+Created, maintained and © by Dr. Peter Hruschka, Dr. Gernot Starke and
+contributors. See \url{https://arc42.org}.
+
+\section{Introduction and Goals}\label{section-introduction-and-goals}
+
+\subsection{Requirements Overview}\label{_requirements_overview}
+
+\subsection{Quality Goals}\label{_quality_goals}
+
+\subsection{Stakeholders}\label{_stakeholders}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Role/Name
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Contact
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Expectations
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\emph{\textless Role-1\textgreater{}} &
+\emph{\textless Contact-1\textgreater{}} &
+\emph{\textless Expectation-1\textgreater{}} \\
+\emph{\textless Role-2\textgreater{}} &
+\emph{\textless Contact-2\textgreater{}} &
+\emph{\textless Expectation-2\textgreater{}} \\
+\end{longtable}
+
+\section{Architecture
+Constraints}\label{section-architecture-constraints}
+
+\section{Context and Scope}\label{section-context-and-scope}
+
+\subsection{Business Context}\label{_business_context}
+
+\textbf{\textless Diagram or Table\textgreater{}}
+
+\textbf{\textless optionally: Explanation of external domain
+interfaces\textgreater{}}
+
+\subsection{Technical Context}\label{_technical_context}
+
+\textbf{\textless Diagram or Table\textgreater{}}
+
+\textbf{\textless optionally: Explanation of technical
+interfaces\textgreater{}}
+
+\textbf{\textless Mapping Input/Output to Channels\textgreater{}}
+
+\section{Solution Strategy}\label{section-solution-strategy}
+
+\section{Building Block View}\label{section-building-block-view}
+
+\subsection{Whitebox Overall System}\label{_whitebox_overall_system}
+
+\emph{\textbf{\textless Overview Diagram\textgreater{}}}
+
+\begin{description}
+\item[Motivation]
+\emph{\textless text explanation\textgreater{}}
+\item[Contained Building Blocks]
+\emph{\textless Description of contained building block (black
+boxes)\textgreater{}}
+\item[Important Interfaces]
+\emph{\textless Description of important interfaces\textgreater{}}
+\end{description}
+
+\subsubsection{\textless Name black box
+1\textgreater{}}\label{_name_black_box_1}
+
+\emph{\textless Purpose/Responsibility\textgreater{}}
+
+\emph{\textless Interface(s)\textgreater{}}
+
+\emph{\textless(Optional) Quality/Performance
+Characteristics\textgreater{}}
+
+\emph{\textless(Optional) Directory/File Location\textgreater{}}
+
+\emph{\textless(Optional) Fulfilled Requirements\textgreater{}}
+
+\emph{\textless(optional) Open Issues/Problems/Risks\textgreater{}}
+
+\subsubsection{\textless Name black box
+2\textgreater{}}\label{_name_black_box_2}
+
+\emph{\textless black box template\textgreater{}}
+
+\subsubsection{\textless Name black box
+n\textgreater{}}\label{_name_black_box_n}
+
+\emph{\textless black box template\textgreater{}}
+
+\subsubsection{\textless Name interface
+1\textgreater{}}\label{_name_interface_1}
+
+\ldots\hspace{0pt}
+
+\subsubsection{\textless Name interface
+m\textgreater{}}\label{_name_interface_m}
+
+\subsection{Level 2}\label{_level_2}
+
+\subsubsection{\texorpdfstring{White Box \emph{\textless building block
+1\textgreater{}}}{White Box \textless building block 1\textgreater{}}}\label{_white_box_building_block_1}
+
+\emph{\textless white box template\textgreater{}}
+
+\subsubsection{\texorpdfstring{White Box \emph{\textless building block
+2\textgreater{}}}{White Box \textless building block 2\textgreater{}}}\label{_white_box_building_block_2}
+
+\emph{\textless white box template\textgreater{}}
+
+\ldots\hspace{0pt}
+
+\subsubsection{\texorpdfstring{White Box \emph{\textless building block
+m\textgreater{}}}{White Box \textless building block m\textgreater{}}}\label{_white_box_building_block_m}
+
+\emph{\textless white box template\textgreater{}}
+
+\subsection{Level 3}\label{_level_3}
+
+\subsubsection{White Box \textless\_building block
+x.1\_\textgreater{}}\label{_white_box_building_block_x_1}
+
+\emph{\textless white box template\textgreater{}}
+
+\subsubsection{White Box \textless\_building block
+x.2\_\textgreater{}}\label{_white_box_building_block_x_2}
+
+\emph{\textless white box template\textgreater{}}
+
+\subsubsection{White Box \textless\_building block
+y.1\_\textgreater{}}\label{_white_box_building_block_y_1}
+
+\emph{\textless white box template\textgreater{}}
+
+\section{Runtime View}\label{section-runtime-view}
+
+\subsection{\textless Runtime Scenario
+1\textgreater{}}\label{_runtime_scenario_1}
+
+\begin{itemize}
+\item
+  \emph{\textless insert runtime diagram or textual description of the
+  scenario\textgreater{}}
+\item
+  \emph{\textless insert description of the notable aspects of the
+  interactions between the building block instances depicted in this
+  diagram.\textgreater{}}
+\end{itemize}
+
+\subsection{\textless Runtime Scenario
+2\textgreater{}}\label{_runtime_scenario_2}
+
+\subsection{\ldots\hspace{0pt}}
+
+\subsection{\textless Runtime Scenario
+n\textgreater{}}\label{_runtime_scenario_n}
+
+\section{Deployment View}\label{section-deployment-view}
+
+\subsection{Infrastructure Level 1}\label{_infrastructure_level_1}
+
+\emph{\textbf{\textless Overview Diagram\textgreater{}}}
+
+\begin{description}
+\item[Motivation]
+\emph{\textless explanation in text form\textgreater{}}
+\item[Quality and/or Performance Features]
+\emph{\textless explanation in text form\textgreater{}}
+\item[Mapping of Building Blocks to Infrastructure]
+\emph{\textless description of the mapping\textgreater{}}
+\end{description}
+
+\subsection{Infrastructure Level 2}\label{_infrastructure_level_2}
+
+\subsubsection{\texorpdfstring{\emph{\textless Infrastructure Element
+1\textgreater{}}}{\textless Infrastructure Element 1\textgreater{}}}\label{_infrastructure_element_1}
+
+\emph{\textless diagram + explanation\textgreater{}}
+
+\subsubsection{\texorpdfstring{\emph{\textless Infrastructure Element
+2\textgreater{}}}{\textless Infrastructure Element 2\textgreater{}}}\label{_infrastructure_element_2}
+
+\emph{\textless diagram + explanation\textgreater{}}
+
+\ldots\hspace{0pt}
+
+\subsubsection{\texorpdfstring{\emph{\textless Infrastructure Element
+n\textgreater{}}}{\textless Infrastructure Element n\textgreater{}}}\label{_infrastructure_element_n}
+
+\emph{\textless diagram + explanation\textgreater{}}
+
+\section{Cross-cutting Concepts}\label{section-concepts}
+
+\subsection{\texorpdfstring{\emph{\textless Concept
+1\textgreater{}}}{\textless Concept 1\textgreater{}}}\label{_concept_1}
+
+\emph{\textless explanation\textgreater{}}
+
+\subsection{\texorpdfstring{\emph{\textless Concept
+2\textgreater{}}}{\textless Concept 2\textgreater{}}}\label{_concept_2}
+
+\emph{\textless explanation\textgreater{}}
+
+\ldots\hspace{0pt}
+
+\subsection{\texorpdfstring{\emph{\textless Concept
+n\textgreater{}}}{\textless Concept n\textgreater{}}}\label{_concept_n}
+
+\emph{\textless explanation\textgreater{}}
+
+\section{Architecture Decisions}\label{section-design-decisions}
+
+\section{Quality Requirements}\label{section-quality-scenarios}
+
+\subsection{Quality Requirements
+Overview}\label{_quality_requirements_overview}
+
+\subsection{Quality Scenarios}\label{_quality_scenarios}
+
+\section{Risks and Technical Debts}\label{section-technical-risks}
+
+\section{Glossary}\label{section-glossary}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6667}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Term
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Definition
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\emph{\textless Term-1\textgreater{}} &
+\emph{\textless definition-1\textgreater{}} \\
+\emph{\textless Term-2\textgreater{}} &
+\emph{\textless definition-2\textgreater{}} \\
+\end{longtable}
+
+\end{document}
