@@ -1,0 +1,34 @@
+{
+  // GIT
+  // Do not ignore whitespace changes in the diff view
+  "diffEditor.ignoreTrimWhitespace": false,
+
+  // Render whitespace glyphs (dots for spaces, arrows for tabs)
+  "editor.renderWhitespace": "all",
+
+  // LATEX
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.latex.outDir": "%DIR%",   // better would be "%DIR%/build",
+  "latex-workshop.latex.autoBuild.run": "onFileChange",
+  "latex-workshop.latex.autoClean.run": "onBuilt",
+  "latex-workshop.latex.clean.subfolder.enabled": true,
+
+  "latex-workshop.linting.chktex.enabled": true,
+  
+  "ltex.language": "en-US",
+  "ltex.enabled": [
+    "latex",
+    "bibtex",
+    "markdown"
+  ],
+
+  // Custom dictionary (whitelist)
+  "ltex.dictionary": {
+    "en-US": [
+      "arc42",
+      "microservice",
+      "microservices",
+      "SyncTeX"
+    ]
+  }
+}
