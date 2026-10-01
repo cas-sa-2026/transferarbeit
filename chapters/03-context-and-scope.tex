@@ -1,0 +1,51 @@
+% =========================================================
+% 3. CONTEXT AND SCOPE
+% =========================================================
+\section{Context and Scope}
+
+\minititle{Contents}
+Context and scope - as the name suggests - delimits your system (i.e. your scope) from all its communication partners (neighboring systems and users, i.e. the context of your system). It thereby specifies the external interfaces.
+If necessary, differentiate the business context (domain specific inputs and outputs) from the technical context (channels, protocols, hardware).
+
+\minititle{Motivation}
+The domain interfaces and technical interfaces to communication partners are among your system’s most critical aspects. Make sure that you completely understand them.
+
+\minititle{Form}
+Various options:
+\begin{itemize}
+  \item Context diagrams
+  \item Lists of communication partners and their interfaces.
+\end{itemize}
+
+\minititle{Further Information}
+See Context and Scope in the arc42 documentation:
+\href{https://docs.arc42.org/section-3/}{https://docs.arc42.org/section-3/}
+
+\subsection{Business Context}
+
+\minititle{Contents}
+Specification of all communication partners (users, IT-systems, \dots) with explanations of domain specific inputs and outputs or interfaces. Optionally you can add domain specific formats or communication protocols.
+
+\minititle{Motivation}
+All stakeholders should understand which data are exchanged with the environment of the system.
+
+\minititle{Form}
+All kinds of diagrams that show the system as a black box and specify the domain interfaces to communication partners.
+Alternatively (or additionally) you can use a table. The title of the table is the name of your system, the three columns contain the name of the communication partner, the inputs, and the outputs.
+\textless Diagram or Table\textgreater\\
+\textless optionally: Explanation of external domain interfaces\textgreater
+
+\subsection{Technical Context}
+
+\minititle{Contents}
+Technical interfaces (channels and transmission media) linking your system to its environment. In addition a mapping of domain specific input/output to the channels, i.e. an explanation which I/O uses which channel.
+
+\minititle{Motivation}
+Many stakeholders make architectural decision based on the technical interfaces between the system and its context. Especially infrastructure or hardware designers decide these technical interfaces.
+
+\minititle{Form}
+E.g. UML deployment diagram describing channels to neighboring systems, together with a mapping table showing the relationships between channels and input/output.
+\textless Diagram or Table\textgreater\\
+\textless optionally: Explanation of technical interfaces\textgreater\\
+\textless Mapping Input/Output to Channels\textgreater
+

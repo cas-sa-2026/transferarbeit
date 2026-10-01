@@ -1,0 +1,59 @@
+% =========================================================
+% 9. ARCHITECTURE DECISIONS
+% =========================================================
+\section{Architecture Decisions}
+
+\minititle{Contents}
+Important, expensive, large scale or risky architecture decisions including rationales. With ``decisions'' we mean selecting one alternative based on given criteria.
+
+Please use your judgement to decide whether an architectural decision should be documented here in this central section or whether you better document it locally (e.g. within the white box template of one building block).
+
+Avoid redundancy. Refer to section 4, where you already captured the most important decisions of your architecture.
+
+\minititle{Motivation}
+Stakeholders of your system should be able to comprehend and retrace your decisions.
+
+\minititle{Form}
+Various options:
+\begin{itemize}
+  \item ADR (Documenting Architecture Decisions) for every important decision
+  \item List or table, ordered by importance and consequences or:
+  \item more detailed in form of separate sections per decision
+\end{itemize}
+
+% Course comment:
+% Use 1 template (and explain why you chose this particular one), add a reference to the template.
+% Make sure your ADR are SMART.
+
+\minititle{Further Information}
+See Architecture Decisions in the arc42 documentation:
+\href{https://docs.arc42.org/section-9/}{https://docs.arc42.org/section-9/}\\
+Documenting Architecture Decisions (ADR):\\
+\href{https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions}{https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions}
+
+
+%% START - ADDED BY PH
+\subsection{Approach}
+Decisions are documented as Architecture Decision Records (ADR) in the Y-Statement format by Zimmermann~\cite{Zimmermann2020}.
+A Y-Statement captures a decision in one sentence with six parts: context, facing (the quality concern), the option chosen, the alternatives neglected, the benefits to achieve, and the consequences accepted.
+This template was chosen because it keeps each decision short and makes the trade-off explicit.
+It is extended by a header (status, date, deciders, affected quality goals) and a measurable verification criterion, so that each ADR is specific, measurable and testable (SMART).
+ 
+%Each ADR lives in its own file under \texttt{adr/}.
+%ADRs are numbered sequentially and never renumbered; a changed decision is recorded as a new ADR that supersedes the old one.
+ 
+\subsection{Decision Log}
+\begin{longtable}{@{}p{1.9cm}p{6.6cm}p{2.4cm}p{3.6cm}@{}}
+\toprule
+ID & Title & Status & Quality goal \\
+\midrule
+\endhead
+\hyperref[adr:01]{ADR-01} & <Title> & proposed & <QG-x> \\
+\bottomrule
+\end{longtable}
+ 
+\subsection{Decisions}
+\input{adrs/01-short-title}
+% \input{adr/02-<hort-title}
+
+%% END - ADDED BY PH

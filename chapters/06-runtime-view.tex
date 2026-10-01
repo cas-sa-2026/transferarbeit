@@ -1,0 +1,46 @@
+% =========================================================
+% 6. RUNTIME VIEW
+% =========================================================
+\section{Runtime View}
+
+\minititle{Contents}
+The runtime view describes concrete behavior and interactions of the system’s building blocks in form of scenarios from the following areas:
+\begin{itemize}
+  \item important use cases or features: how do building blocks execute them?
+  \item interactions at critical external interfaces: how do building blocks cooperate with users and neighboring systems?
+  \item operation and administration: launch, start-up, stop
+  \item error and exception scenarios
+\end{itemize}
+
+\noindent\textbf{Remark:} The main criterion for the choice of possible scenarios (sequences, workflows) is their architectural relevance. It is not important to describe a large number of scenarios. You should rather document a representative selection.
+
+\minititle{Motivation}
+You should understand how (instances of) building blocks of your system perform their job and communicate at runtime. You will mainly capture scenarios in your documentation to communicate your architecture to stakeholders that are less willing or able to read and understand the static models (building block view, deployment view).
+
+\minititle{Form}
+There are many notations for describing scenarios, e.g.
+\begin{itemize}
+  \item numbered list of steps (in natural language)
+  \item activity diagrams or flow charts
+  \item sequence diagrams
+  \item BPMN or EPCs (event process chains)
+  \item state machines
+  \item \dots
+\end{itemize}
+
+\minititle{Further Information}
+See Runtime View in the arc42 documentation:
+\href{https://docs.arc42.org/section-6/}{https://docs.arc42.org/section-6/}
+
+\subsection{\textless Runtime Scenario 1\textgreater}
+\begin{itemize}
+  \item \textless insert runtime diagram or textual description of the scenario\textgreater
+  \item \textless insert description of the notable aspects of the interactions between the building block instances depicted in this diagram\textgreater
+\end{itemize}
+
+\subsection{\textless Runtime Scenario 2\textgreater}
+\dots
+
+\subsection{\textless Runtime Scenario n\textgreater}
+\dots
+

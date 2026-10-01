@@ -1,0 +1,35 @@
+% =========================================================
+% ADR TEMPLATE -- Y-Statement (Olaf Zimmermann)
+% Copy to adr/NN-short-title.tex, fill in, then add an
+% \input line in chapters/09-architecture-decisions.tex and a
+% row in the decision log. Never renumber; supersede instead.
+% Keep the whole statement in one sentence if possible; split
+% lines if they get long.
+% =========================================================
+\subsubsection{ADR-NN: <Short title of the decision>}
+\label{adr:NN}
+
+\begin{tabular}{@{}p{3.4cm}p{11cm}@{}}
+\toprule
+\textbf{Status}        & proposed / accepted / rejected / superseded by ADR-XXXX \\
+\textbf{Date}          & YYYY-MM-DD \\
+\textbf{Deciders}      & <names> \\
+\textbf{Quality goals} & <e.g.\ QG-1 Performance; see Section~\ref{sec:quality-goals}> \\
+\bottomrule
+\end{tabular}
+
+\minititle{Y-Statement}
+\begin{quote}
+\textbf{In the context of} <functional requirement (story, use case) or component>,\\
+\textbf{facing} <non-functional requirement, e.g.\ a desired quality>,\\
+\textbf{we decided for} <option chosen>\\
+\textbf{and neglected} <alternatives not chosen>,\\
+\textbf{to achieve} <benefits, i.e.\ satisfaction of the requirement(s)>,\\
+\textbf{accepting that} <drawbacks and other consequences, e.g.\ impact and effort>.
+\end{quote}
+
+\minititle{Additional Justification (optional)}
+\textbf{Because} <extra reasoning gained during decision making; delete if not needed>.
+
+\minititle{Verification}
+<Measurable check that shows the decision works, e.g.\ ``p95 latency $<$ 200\,ms at 50 concurrent users''. Link to a quality scenario in Section~10.2.>
